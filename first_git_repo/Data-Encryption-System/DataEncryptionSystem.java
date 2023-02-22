@@ -2,6 +2,27 @@ import java.util.Scanner;
 public class DataEncryptionSystem{
 
 
+    // Utility Method n Start
+
+    // Method to check char Uppercase or not
+    public static Boolean checkUpperCase(char ch)
+	{
+		 if (ch >= 'A' && ch <= 'Z')
+			return true ; 
+		else 
+			return false; 
+	} 
+
+    // Method to check char Lowercase or not
+	public static Boolean checkLowerCase(char ch)
+	{
+		 if (ch >= 'a' && ch <= 'z')
+		 	return true; 
+		else 
+			return false ; 
+	} 
+    // Utility Method End
+
     // Method to encode the data
     public static StringBuilder encodeMessage(String message) {
         // To store the encoded message
