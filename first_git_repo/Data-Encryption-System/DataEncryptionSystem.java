@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class DataEncryptionSystem{
 
-
     // Utility Method n Start
 
     // Method to check char Uppercase or not
@@ -62,11 +61,19 @@ public class DataEncryptionSystem{
     }
 
     public static void main(String[] args) {
+        // Your code goes here
         System.out.println("<====Welcome to the Message Encode System ====>");
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your message to encode: ");
         // Taking data input from the user
         String message = sc.nextLine();
+
+        // Invoking the encodeMessage method to encode the message/data
+        StringBuilder encodeMsg= encodeMessage(message); 
+		System.out.println("Encoded message: "+ encodeMsg);
+
+
+
     }
 }
