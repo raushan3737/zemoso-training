@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class DataEncryptionSystem{
 
-    // Utility Method n Start
+    // Utility Method Start
 
     // Method to check char Uppercase or not
     public static Boolean checkUpperCase(char ch)
