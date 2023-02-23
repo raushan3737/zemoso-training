@@ -1,6 +1,33 @@
+/*
+Data Encryption System: Rahul wants to send encoded messages to his friend Ram.
+Develop an algorithm to encode all the digits, special characters, lower and upper case alphabets.
+*/
+
+/* 
+Approach: 
+
+    1. First taking input string from the user
+    2. Calling the encodeMessage method to encode the string
+    3. In encodeMessage method: 
+        1. initialize a string to store the encoded message.
+        2.We iterate over each character do the following : 
+            If char is alphabetical then, i store in a new string  like: 'a' -> 'z' , 'b' -> 'y' , 'c' -> 'x' for lowercase & 
+            for uppercase we do the same i.e. 'A' -> 'Z' , 'B' -> 'Y'  so on.
+
+            If char is digit then, adding digit%2, (digit%2) times in the string 
+            If char is special then, first we shift this char by (ascii of char / 33) & then, store in the string i.e. in encodeMessage. 
+        
+        3. At last, we reverse the encodeMessage string to add more complexity in it. 
+        4. Return the reverse encodeMessage.
+
+    4. Print the encoded string in the main method. 
+     
+*/
+
 import java.util.Scanner;
 public class DataEncryptionSystem{
 
+    
     // Utility Method Start
 
     // Method to check char Uppercase or not
@@ -23,7 +50,13 @@ public class DataEncryptionSystem{
     // Utility Method End
 
     // Method to encode the data
-    public static StringBuilder encodeMessage(String message) {
+
+    /*  Complexity: Time Complexity: O(N)
+                    Space Complexity:O(N) , Where, N is the length of the input string/message
+
+    */
+    public static StringBuilder encodeMessage(String message) // 
+     {
         // To store the encoded message
         String encMessage = new String();
 
@@ -50,6 +83,7 @@ public class DataEncryptionSystem{
                 encMessage += newChar;
             }
         }
+
         // To store the reverse of encoded Message
         StringBuilder strBuilder = new StringBuilder();
         strBuilder.append(encMessage);
@@ -72,7 +106,6 @@ public class DataEncryptionSystem{
         // Invoking the encodeMessage method to encode the message/data
         StringBuilder encodeMsg= encodeMessage(message); 
 		System.out.println("Encoded message: "+ encodeMsg);
-
 
 
     }
